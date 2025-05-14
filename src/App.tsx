@@ -1,12 +1,12 @@
 import React, { useState, lazy, Suspense } from 'react';
-import ProgressIndicator from './components/ProgressIndicator.tsx';
-import CloseButton from './components/CloseButton.tsx';
-import Button from './components/Button.tsx';
+import ProgressIndicator from './components/ProgressIndicator';
+import CloseButton from './components/CloseButton';
+import Button from './components/Button';
 import { ChevronRight } from 'lucide-react';
 
-const DesignStyleCarousel = lazy(() => import('./components/Carousel/DesignStyleCarousel.tsx'));
-const ColorPicker = lazy(() => import('./components/ColorPicker.tsx'));
-const LogoUpload = lazy(() => import('./components/LogoUpload.tsx'));
+const DesignStyleCarousel = lazy(() => import('./components/Carousel/DesignStyleCarousel'));
+const ColorPicker = lazy(() => import('./components/ColorPicker'));
+const LogoUpload = lazy(() => import('./components/LogoUpload'));
 
 function App() {
   const [selectedStyle, setSelectedStyle] = useState('classic');
