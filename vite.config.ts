@@ -37,6 +37,8 @@ export default defineConfig({
     exclude: ['colorthief']
   },
   server: {
+    host: true,
+    port: 5173,
     warmup: {
       clientFiles: [
         './src/components/**/*.tsx',
