@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans text-gray-900 antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-sans leading-tight;
+  }
+  
+  p {
+    @apply leading-relaxed;
+  }
+}
+
+@layer components {
+  /* Animation classes */
+  .animate-fadeIn {
+    animation: fadeIn 0.5s ease-out;
+  }
+  
+  .animate-slideUp {
+    animation: slideUp 0.4s ease-out;
+  }
+  
+  .animate-pulse {
+    animation: pulse 2s infinite;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+/* Transition classes */
+.scale-97 {
+  transform: scale(0.97);
+}
+
+/* Custom styles that can't be handled by Tailwind utilities */
+.carousel-item {
+  @apply transition-all duration-300 ease-out;
+}
